@@ -39,111 +39,102 @@ class CfgMods {
 	};
 };
 
-class cfgVehicles{
+class cfgVehicles {
 
-	class ItemOptics;
-
-	// AD_ACOG /////////////////////////////////////////////////////////
-
-	class AD_ACOG_Base: ItemOptics {
-		class OpticsInfo {
-			PPMaskProperties[] = {0.0, 0.0, 0.33, 0.001};
-			PPLensProperties[] = {0.5, 0.0, 0.0, 0.2};
-		};
+	class ItemOptics_Base;
+	class AD_ACOG_Base : ItemOptics_Base {
+		s_pipRadius = 0.35;
+		s_pipMagnification = 0.5;
+		s_pipBlur = 0.01;
+		s_pipChromAber = 0.2;
 	};
-
-	class AD_ACOG_RMR_Base: ItemOptics {
-		class OpticsInfo {
-			PPMaskProperties[] = {0.0, 0.0, 0.33, 0.001};
-			PPLensProperties[] = {0.5, 0.0, 0.0, 0.2};
-		};
+	class AD_ACOG_RMR_Base : ItemOptics_Base {
+		s_pipRadius = 0.35;
+		s_pipMagnification = 0.5;
+		s_pipBlur = 0.01;
+		s_pipChromAber = 0.2;
 	};
-
-
-	// AD_DHF5 /////////////////////////////////////////////////////////
-	class AD_DHF5_Base : ItemOptics {
-		class OpticsInfo {
-			PPMaskProperties[] = {0.0, 0.0, 0.7, 0.001};
-			PPLensProperties[] = {0.3, 0.0, 0.0, 0.3};
-		};
+	class AD_DHF5_Base : ItemOptics_Base {
+		s_isFullscreen = 1;
+		s_showEnterMisalignment = 1;
+		s_pipRadius = 1.0;
+		s_pipMagnification = 0.2;
+		s_pipBlur = 0.001;
+		s_pipChromAber = 0.5;
 	};
-
-
-	// AD_LeupoldMk4 /////////////////////////////////////////////////////////
-	class AD_LeupoldMk4_Base : ItemOptics {
-		class OpticsInfo {
-			PPMaskProperties[] = {0.0, 0.0, 0.7, 0.001};
-			PPLensProperties[] = {0.3, 0.0, 0.0, 0.3};
-		};
+	class AD_LeupoldMk4_Base : ItemOptics_Base {
+		s_isFullscreen = 1;
+		s_showEnterMisalignment = 1;
+		s_pipRadius = 1.0;
+		s_pipMagnification = 0.2;
+		s_pipBlur = 0.001;
+		s_pipChromAber = 0.5;
 	};
-
-
-	// AD_NFATACR /////////////////////////////////////////////////////////
-	class AD_NFATACR_Base : ItemOptics {
-		class OpticsInfo {
-			PPMaskProperties[] = {0.0, 0.0, 0.7, 0.001};
-			PPLensProperties[] = {0.3, 0.0, 0.0, 0.3};
-		};
+	class AD_NFATACR_Base : ItemOptics_Base {
+		s_isFullscreen = 1;
+		s_showEnterMisalignment = 1;
+		s_pipRadius = 1.0;
+		s_pipMagnification = 0.2;
+		s_pipBlur = 0.001;
+		s_pipChromAber = 0.5;
 	};
-
-
-	// AD_B13Mount /////////////////////////////////////////////////////////
 	class AD_NFATACR_B13_RMR : AD_NFATACR_Base {
+		s_isFullscreen = 1;
+		s_showEnterMisalignment = 1;
+		s_pipRadius = 1.0;
+		s_pipMagnification = 0.2;
+		s_pipBlur = 0.001;
+		s_pipChromAber = 0.5;
+	};
+	class AD_NFATACR_1_8_Base : ItemOptics_Base {
+		s_isFullscreen = 1;
+		s_showEnterMisalignment = 1;
+		s_pipRadius = 3.0;
+		s_pipMagnification = 0.2;
+		s_pipBlur = 0.001;
+		s_pipChromAber = 0.5;
+	};	
+	class AD_Pilad_Base : ItemOptics_Base {
+		s_isFullscreen = 1;
+		s_showEnterMisalignment = 1;
+		s_pipRadius = 1.0;
+		s_pipMagnification = 0.2;
+		s_pipBlur = 0.001;
+		s_pipChromAber = 0.5;
+	};	
+	class AD_PVS4_Base : ItemOptics_Base {
+		s_isFullscreen = 1;.
+		s_showEnterMisalignment = 1;
+		s_pipRadius = 2.0;
+		s_pipMagnification = -0.3;
+		s_pipBlur = 0.05;
+		s_pipChromAber = 0.01;
+	};
+	class AD_SpecterDR_Base : ItemOptics_Base {
+		s_pipRadius = 0.5;
+		s_pipMagnification = 0.3;
+		s_pipBlur = 0.01;
+		s_pipChromAber = 0.3;
+		// sorry, no double zoom :(
 		class OpticsInfo {
-			PPMaskProperties[] = {0.0, 0.0, 0.7, 0.001};
-			PPLensProperties[] = {0.3, 0.0, 0.0, 0.3};
+			opticsZoomMin="0.3926/6";
+			opticsZoomMax="0.3926/6";
+			opticsZoomInit="0.3926/6";
+			discretefov[] = {};
 		};
 	};
-
-
-	// AD_NFATACR_1_8 /////////////////////////////////////////////////////////
-	class AD_NFATACR_1_8_Base : ItemOptics {
-		class OpticsInfo {
-			PPMaskProperties[] = {0.0, 0.0, 2.0, 0.001};
-			PPLensProperties[] = {0.3, 0.0, 0.0, 0.3};
-		};
+	class AD_XPS34_HHS_Base : ItemOptics_Base {
+		s_pipOffset[] = {0.00, 0.03};
+		s_pipLensOffset[] = {0.00, -0.03};
+		s_pipRadius = 0.5;
+		s_pipMagnification = 0.3;
+		s_pipBlur = 0.02;
+		s_pipChromAber = 0.2;
 	};
-
-
-	// AD_Pilad /////////////////////////////////////////////////////////
-	class AD_Pilad_Base : ItemOptics {
-		class OpticsInfo {
-			PPMaskProperties[] = {0.0, 0.0, 0.7, 0.001};
-			PPLensProperties[] = {0.3, 0.0, 0.0, 0.3};
-		};
-	};
-
-
-	// AD_PVS4 /////////////////////////////////////////////////////////
-	class AD_PVS4_Base : ItemOptics {
-		class OpticsInfo {
-			PPMaskProperties[] = {0.0, 0.0, 2.0, 0.001};
-			PPLensProperties[] = {-0.5, 0.0, 0.0, 0.0};
-		};
-	};
-
-
-	// AD_SpecterDR /////////////////////////////////////////////////////////
-	class AD_SpecterDR_Base : ItemOptics {
-		class OpticsInfo {
-			PPMaskProperties[] = {0.0, 0.0, 0.5, 0.0075};
-			PPLensProperties[] = {0.3, 0.0, 0.0, 0.3};
-		};
-	};
-
-
-	// AD_XPS34 /////////////////////////////////////////////////////////
-	class AD_XPS34_HSS_Base : ItemOptics {
-		class OpticsInfo {
-			PPMaskProperties[] = {0.0, 0.02, 0.5, 0.0075};
-			PPLensProperties[] = {0.3, 0.0, 0.0, 0.3};
-		};
-	};
-
-	class AD_G33_Base : ItemOptics {
-		class OpticsInfo {
-			PPMaskProperties[] = {0.0, 0.015, 0.4, 0.001};
-			PPLensProperties[] = {0.3, 0.0, 0.0, 0.3};
-		};
+	class AD_G33_Base : ItemOptics_Base {
+		s_pipRadius = 0.35;
+		s_pipMagnification = 0.3;
+		s_pipBlur = 0.02;
+		s_pipChromAber = 0.3;
 	};
 };
